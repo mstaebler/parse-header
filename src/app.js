@@ -6,8 +6,6 @@ app.listen(process.env.PORT || 3000);
 
 app.use(express.static(path.join(__dirname, '../public')));
 
-app.use(morgan('common'));
-
 app.get('/', (req, res) => {
     res.json(req.headers);
 });
